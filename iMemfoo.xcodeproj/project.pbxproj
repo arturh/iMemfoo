@@ -43,17 +43,17 @@
 		7587DB62150124D5001AF28F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		7587DB64150124D5001AF28F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		7587DB66150124D5001AF28F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		7587DB6A150124D5001AF28F /* iMemfoo-Info.plist */ = {isa = PBXFileReference; path = "iMemfoo-Info.plist"; sourceTree = "<group>"; };
+		7587DB6A150124D5001AF28F /* iMemfoo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iMemfoo-Info.plist"; sourceTree = "<group>"; };
 		7587DB6C150124D5001AF28F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		7587DB6E150124D5001AF28F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		7587DB70150124D5001AF28F /* iMemfoo-Prefix.pch */ = {isa = PBXFileReference; path = "iMemfoo-Prefix.pch"; sourceTree = "<group>"; };
-		7587DB71150124D5001AF28F /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		7587DB70150124D5001AF28F /* iMemfoo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iMemfoo-Prefix.pch"; sourceTree = "<group>"; };
+		7587DB71150124D5001AF28F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		7587DB72150124D5001AF28F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		7587DB74150124D5001AF28F /* FirstViewController.h */ = {isa = PBXFileReference; path = FirstViewController.h; sourceTree = "<group>"; };
+		7587DB74150124D5001AF28F /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
 		7587DB75150124D5001AF28F /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
 		7587DB77150124D5001AF28F /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
 		7587DB79150124D5001AF28F /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
-		7587DB7B150124D5001AF28F /* SecondViewController.h */ = {isa = PBXFileReference; path = SecondViewController.h; sourceTree = "<group>"; };
+		7587DB7B150124D5001AF28F /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
 		7587DB7C150124D5001AF28F /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		7587DB7E150124D5001AF28F /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
 		7587DB80150124D5001AF28F /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
@@ -61,9 +61,9 @@
 		7587DB86150124D5001AF28F /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/SecondViewController.xib; sourceTree = "<group>"; };
 		7587DB8D150124D5001AF28F /* iMemfooTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iMemfooTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7587DB8E150124D5001AF28F /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		7587DB96150124D5001AF28F /* iMemfooTests-Info.plist */ = {isa = PBXFileReference; path = "iMemfooTests-Info.plist"; sourceTree = "<group>"; };
+		7587DB96150124D5001AF28F /* iMemfooTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iMemfooTests-Info.plist"; sourceTree = "<group>"; };
 		7587DB98150124D5001AF28F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		7587DB9A150124D5001AF28F /* iMemfooTests.h */ = {isa = PBXFileReference; path = iMemfooTests.h; sourceTree = "<group>"; };
+		7587DB9A150124D5001AF28F /* iMemfooTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iMemfooTests.h; sourceTree = "<group>"; };
 		7587DB9B150124D5001AF28F /* iMemfooTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iMemfooTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -395,6 +395,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "iMemfoo/iMemfoo-Prefix.pch";
 				INFOPLIST_FILE = "iMemfoo/iMemfoo-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 3.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -406,6 +407,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "iMemfoo/iMemfoo-Prefix.pch";
 				INFOPLIST_FILE = "iMemfoo/iMemfoo-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 3.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
