@@ -10,6 +10,39 @@
 
 @implementation FirstViewController
 
+
+@synthesize btnKana;
+@synthesize btnShowBack;
+@synthesize btnForget;
+@synthesize btnRemember;
+@synthesize tvMeaning;
+@synthesize tvKanji;
+
+-(IBAction)showBack:(id)sendr {
+    btnShowBack.hidden = YES;
+    btnKana.hidden = NO;
+    btnRemember.hidden = NO;
+    btnForget.hidden = NO;
+    tvMeaning.hidden = NO;
+}
+
+-(void)hideBack {
+    btnShowBack.hidden = NO;
+    btnKana.hidden = YES;
+    btnRemember.hidden = YES;
+    btnForget.hidden = YES;
+    tvMeaning.hidden = YES;    
+}
+
+-(IBAction)remember:(id)sender {
+    [self hideBack];
+}
+
+-(IBAction)forget:(id)sender {
+    [self hideBack];
+}
+
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
