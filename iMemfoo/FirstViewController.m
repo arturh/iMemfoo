@@ -18,6 +18,8 @@
 @synthesize tvMeaning;
 @synthesize tvKanji;
 
+@synthesize fetchedResultsController, managedObjectContext;
+
 -(IBAction)showBack:(id)sendr {
     btnShowBack.hidden = YES;
     btnKana.hidden = NO;

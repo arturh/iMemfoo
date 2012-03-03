@@ -29,7 +29,7 @@
 		7587DBA6150239A9001AF28F /* samurai.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7587DBA5150239A9001AF28F /* samurai.jpg */; };
 		7587DBAF15026AFD001AF28F /* jlptn5.tsv in Resources */ = {isa = PBXBuildFile; fileRef = 7587DBAE15026AFD001AF28F /* jlptn5.tsv */; };
 		7587DC0715028AE9001AF28F /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7587DC0615028AE9001AF28F /* CoreData.framework */; };
-		7587DC0915028B49001AF28F /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7587DC0815028B49001AF28F /* CoreData.framework */; };
+		7587DC0C15029E23001AF28F /* iMemfoo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7587DC0A15029E23001AF28F /* iMemfoo.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,7 +72,7 @@
 		7587DBA5150239A9001AF28F /* samurai.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = samurai.jpg; sourceTree = "<group>"; };
 		7587DBAE15026AFD001AF28F /* jlptn5.tsv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = jlptn5.tsv; sourceTree = "<group>"; };
 		7587DC0615028AE9001AF28F /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		7587DC0815028B49001AF28F /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CoreData.framework; sourceTree = "<group>"; };
+		7587DC0B15029E23001AF28F /* iMemfoo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = iMemfoo.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,7 +84,6 @@
 				7587DB63150124D5001AF28F /* UIKit.framework in Frameworks */,
 				7587DB65150124D5001AF28F /* Foundation.framework in Frameworks */,
 				7587DB67150124D5001AF28F /* CoreGraphics.framework in Frameworks */,
-				7587DC0915028B49001AF28F /* CoreData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,7 +103,6 @@
 		7587DB53150124D5001AF28F = {
 			isa = PBXGroup;
 			children = (
-				7587DC0615028AE9001AF28F /* CoreData.framework */,
 				7587DB68150124D5001AF28F /* iMemfoo */,
 				7587DB94150124D5001AF28F /* iMemfooTests */,
 				7587DB61150124D5001AF28F /* Frameworks */,
@@ -124,7 +122,7 @@
 		7587DB61150124D5001AF28F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				7587DC0815028B49001AF28F /* CoreData.framework */,
+				7587DC0615028AE9001AF28F /* CoreData.framework */,
 				7587DB62150124D5001AF28F /* UIKit.framework */,
 				7587DB64150124D5001AF28F /* Foundation.framework */,
 				7587DB66150124D5001AF28F /* CoreGraphics.framework */,
@@ -136,8 +134,8 @@
 		7587DB68150124D5001AF28F /* iMemfoo */ = {
 			isa = PBXGroup;
 			children = (
-				7587DB71150124D5001AF28F /* AppDelegate.h */,
 				7587DBAE15026AFD001AF28F /* jlptn5.tsv */,
+				7587DB71150124D5001AF28F /* AppDelegate.h */,
 				7587DB72150124D5001AF28F /* AppDelegate.m */,
 				7587DB74150124D5001AF28F /* FirstViewController.h */,
 				7587DB75150124D5001AF28F /* FirstViewController.m */,
@@ -151,6 +149,7 @@
 				7587DB85150124D5001AF28F /* SecondViewController.xib */,
 				7587DBA5150239A9001AF28F /* samurai.jpg */,
 				7587DB69150124D5001AF28F /* Supporting Files */,
+				7587DC0A15029E23001AF28F /* iMemfoo.xcdatamodeld */,
 			);
 			path = iMemfoo;
 			sourceTree = "<group>";
@@ -303,6 +302,7 @@
 				7587DB73150124D5001AF28F /* AppDelegate.m in Sources */,
 				7587DB76150124D5001AF28F /* FirstViewController.m in Sources */,
 				7587DB7D150124D5001AF28F /* SecondViewController.m in Sources */,
+				7587DC0C15029E23001AF28F /* iMemfoo.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -502,6 +502,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		7587DC0A15029E23001AF28F /* iMemfoo.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				7587DC0B15029E23001AF28F /* iMemfoo.xcdatamodel */,
+			);
+			currentVersion = 7587DC0B15029E23001AF28F /* iMemfoo.xcdatamodel */;
+			path = iMemfoo.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 7587DB55150124D5001AF28F /* Project object */;
 }

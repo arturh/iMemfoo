@@ -8,7 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FirstViewController : UIViewController {
+@interface FirstViewController : UIViewController  <NSFetchedResultsControllerDelegate> {
+    NSFetchedResultsController *fetchedResultsController;
+    NSManagedObjectContext *managedObjectContext;
+
     UIButton *btnKana;
     UIButton *btnShowBack;
     UIButton *btnForget;
@@ -17,7 +20,8 @@
     UITextView *tvMeaning;
 }
 
-
+@property (nonatomic, retain) NSFetchedResultsController *fetchedResultsController;
+@property (nonatomic, retain) NSManagedObjectContext *managedObjectContext;
 
 @property (nonatomic, retain) IBOutlet UIButton *btnKana;
 @property (nonatomic, retain) IBOutlet UIButton *btnShowBack;
