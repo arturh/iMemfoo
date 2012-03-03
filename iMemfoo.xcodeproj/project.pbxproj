@@ -28,6 +28,8 @@
 		7587DB9C150124D5001AF28F /* iMemfooTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7587DB9B150124D5001AF28F /* iMemfooTests.m */; };
 		7587DBA6150239A9001AF28F /* samurai.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7587DBA5150239A9001AF28F /* samurai.jpg */; };
 		7587DBAF15026AFD001AF28F /* jlptn5.tsv in Resources */ = {isa = PBXBuildFile; fileRef = 7587DBAE15026AFD001AF28F /* jlptn5.tsv */; };
+		7587DC0715028AE9001AF28F /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7587DC0615028AE9001AF28F /* CoreData.framework */; };
+		7587DC0915028B49001AF28F /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7587DC0815028B49001AF28F /* CoreData.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,7 +43,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		7587DB5E150124D5001AF28F /* iMemfoo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = iMemfoo.app; path = iPhone.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7587DB5E150124D5001AF28F /* iMemfoo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iMemfoo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7587DB62150124D5001AF28F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		7587DB64150124D5001AF28F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		7587DB66150124D5001AF28F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -69,6 +71,8 @@
 		7587DB9B150124D5001AF28F /* iMemfooTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iMemfooTests.m; sourceTree = "<group>"; };
 		7587DBA5150239A9001AF28F /* samurai.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = samurai.jpg; sourceTree = "<group>"; };
 		7587DBAE15026AFD001AF28F /* jlptn5.tsv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = jlptn5.tsv; sourceTree = "<group>"; };
+		7587DC0615028AE9001AF28F /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		7587DC0815028B49001AF28F /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CoreData.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,9 +80,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7587DC0715028AE9001AF28F /* CoreData.framework in Frameworks */,
 				7587DB63150124D5001AF28F /* UIKit.framework in Frameworks */,
 				7587DB65150124D5001AF28F /* Foundation.framework in Frameworks */,
 				7587DB67150124D5001AF28F /* CoreGraphics.framework in Frameworks */,
+				7587DC0915028B49001AF28F /* CoreData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,6 +104,7 @@
 		7587DB53150124D5001AF28F = {
 			isa = PBXGroup;
 			children = (
+				7587DC0615028AE9001AF28F /* CoreData.framework */,
 				7587DB68150124D5001AF28F /* iMemfoo */,
 				7587DB94150124D5001AF28F /* iMemfooTests */,
 				7587DB61150124D5001AF28F /* Frameworks */,
@@ -117,6 +124,7 @@
 		7587DB61150124D5001AF28F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7587DC0815028B49001AF28F /* CoreData.framework */,
 				7587DB62150124D5001AF28F /* UIKit.framework */,
 				7587DB64150124D5001AF28F /* Foundation.framework */,
 				7587DB66150124D5001AF28F /* CoreGraphics.framework */,
@@ -180,9 +188,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		7587DB5D150124D5001AF28F /* iPhone */ = {
+		7587DB5D150124D5001AF28F /* iMemfoo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7587DB9F150124D5001AF28F /* Build configuration list for PBXNativeTarget "iPhone" */;
+			buildConfigurationList = 7587DB9F150124D5001AF28F /* Build configuration list for PBXNativeTarget "iMemfoo" */;
 			buildPhases = (
 				7587DB5A150124D5001AF28F /* Sources */,
 				7587DB5B150124D5001AF28F /* Frameworks */,
@@ -192,7 +200,7 @@
 			);
 			dependencies = (
 			);
-			name = iPhone;
+			name = iMemfoo;
 			productName = iMemfoo;
 			productReference = 7587DB5E150124D5001AF28F /* iMemfoo.app */;
 			productType = "com.apple.product-type.application";
@@ -237,7 +245,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				7587DB5D150124D5001AF28F /* iPhone */,
+				7587DB5D150124D5001AF28F /* iMemfoo */,
 				7587DB8C150124D5001AF28F /* iMemfooTests */,
 			);
 		};
@@ -311,7 +319,7 @@
 /* Begin PBXTargetDependency section */
 		7587DB93150124D5001AF28F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 7587DB5D150124D5001AF28F /* iPhone */;
+			target = 7587DB5D150124D5001AF28F /* iMemfoo */;
 			targetProxy = 7587DB92150124D5001AF28F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -400,6 +408,10 @@
 		7587DBA0150124D5001AF28F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "iMemfoo/iMemfoo-Prefix.pch";
 				INFOPLIST_FILE = "iMemfoo/iMemfoo-Info.plist";
@@ -412,6 +424,10 @@
 		7587DBA1150124D5001AF28F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "iMemfoo/iMemfoo-Prefix.pch";
 				INFOPLIST_FILE = "iMemfoo/iMemfoo-Info.plist";
@@ -467,7 +483,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7587DB9F150124D5001AF28F /* Build configuration list for PBXNativeTarget "iPhone" */ = {
+		7587DB9F150124D5001AF28F /* Build configuration list for PBXNativeTarget "iMemfoo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7587DBA0150124D5001AF28F /* Debug */,
