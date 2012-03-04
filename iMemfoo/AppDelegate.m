@@ -12,6 +12,8 @@
 
 #import "SecondViewController.h"
 
+#import "CardUITableViewController.h"
+
 #import "Card.h"
 
 @implementation AppDelegate
@@ -142,8 +144,14 @@
     viewController1.managedObjectContext = managedObjectContext;
     
     UIViewController *viewController2 = [[SecondViewController alloc] initWithNibName:@"SecondViewController" bundle:nil];
+    
+    CardUITableViewController *viewController3 = [[CardUITableViewController alloc] initWithNibName:@"CardUITableViewController" bundle:nil];
+    viewController3.managedObjectContext = managedObjectContext;
+    
     self.tabBarController = [[UITabBarController alloc] init];
-    self.tabBarController.viewControllers = [NSArray arrayWithObjects:viewController1, viewController2, nil];
+    self.tabBarController.viewControllers = [NSArray arrayWithObjects:viewController1, viewController2, viewController3, nil];
+    
+    
     self.window.rootViewController = self.tabBarController;
     
     [self.window makeKeyAndVisible];
