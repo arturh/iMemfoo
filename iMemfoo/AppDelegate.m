@@ -89,7 +89,7 @@
                             ofType:@"tsv"];
     NSString *jlptn5 = [NSString stringWithContentsOfFile:path
                                                  encoding:NSUTF8StringEncoding error:nil];
-    NSArray *lines = [jlptn5 componentsSeparatedByString: @"\n"];
+    NSArray *lines = [jlptn5 componentsSeparatedByString: @"\r\n"];
     // If splitting consumes too much RAM, try with NSScanner
     int i = 0;
     for (NSString *line in lines) {

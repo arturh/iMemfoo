@@ -32,6 +32,7 @@
     NSString *path = [[NSBundle mainBundle]
                       pathForResource:currentCard.audio
                       ofType:@"mp3"];
+    path = [NSString stringWithFormat:@"%@/%@.mp3", [[NSBundle mainBundle] resourcePath], currentCard.audio];
     NSLog(@"Rpath: %@", [[NSBundle mainBundle] resourcePath]);
     NSLog(@"audio: %@", self.currentCard.audio);
     NSLog(@"path: %@", path);
