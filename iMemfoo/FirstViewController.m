@@ -114,11 +114,38 @@
     // Release any cached data, images, etc that aren't in use.
 }
 
--(void)loadNextCard
+-(NSArray *)cardsDue
 {
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
     NSEntityDescription *entity = [NSEntityDescription entityForName:@"Card"
-                                              inManagedObjectContext:self.managedObjectContext];
+                                              inManagedObjectContext:managedObjectContext];
+    [fetchRequest setEntity:entity];
+    
+    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"due"
+                                                                   ascending:YES];
+    NSArray *sortDescriptors = [[NSArray alloc] initWithObjects:sortDescriptor, nil];
+    [fetchRequest setSortDescriptors:sortDescriptors];
+    
+    
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:
+                              @"(due <= %@) AND (introduced != nil)", [NSDate date]];
+    
+    [fetchRequest setPredicate:predicate];
+    
+    
+    NSError *error = nil;
+    NSArray *fetchedObjects = [managedObjectContext executeFetchRequest:fetchRequest error:&error];
+    if (fetchedObjects == nil) {
+        // Handle the error
+    }
+    return fetchedObjects;
+}
+
+-(NSArray *)cardsNotIntroduced
+{
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Card"
+                                              inManagedObjectContext:managedObjectContext];
     [fetchRequest setEntity:entity];
     
     NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"cardId"
@@ -126,20 +153,31 @@
     NSArray *sortDescriptors = [[NSArray alloc] initWithObjects:sortDescriptor, nil];
     [fetchRequest setSortDescriptors:sortDescriptors];
     
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:
-                              @"introduced == nil"];
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"(introduced == nil)"];
     
     [fetchRequest setPredicate:predicate];
     
+    
     NSError *error = nil;
-    NSArray *fetchedObjects =
-        [self.managedObjectContext executeFetchRequest:fetchRequest error:&error];
+    NSArray *fetchedObjects = [managedObjectContext executeFetchRequest:fetchRequest error:&error];
     if (fetchedObjects == nil) {
         // Handle the error
     }
+    return fetchedObjects;
+}
+
+-(void)loadNextCard
+{
+    NSArray *due = [self cardsDue];
+    NSArray *notIntroduced = [self cardsNotIntroduced];
     
-    self.currentCard = [fetchedObjects objectAtIndex:0];
+    if ([due count] > 0) {
+        self.currentCard = [due objectAtIndex:0];
+    } else {
+        self.currentCard = [notIntroduced objectAtIndex:0];
+    }
     self.currentCard.introduced = [NSDate date];
+    NSError *error = nil;
     [self.managedObjectContext save:&error];
     
     tvKanji.text = self.currentCard.kanji;

@@ -151,6 +151,7 @@
     self.tabBarController = [[UITabBarController alloc] init];
     self.tabBarController.viewControllers = [NSArray arrayWithObjects:viewController1, viewController2, viewController3, nil];
     
+    [self.window addSubview:[viewController3 view]];
     
     self.window.rootViewController = self.tabBarController;
     
