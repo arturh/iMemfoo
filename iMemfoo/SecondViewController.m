@@ -10,11 +10,16 @@
 
 @implementation SecondViewController
 
+@synthesize
+    lbCardsLeft,
+    lbCardsLearned,
+    lbDueTomorrow;
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        self.title = NSLocalizedString(@"List", @"List");
+        self.title = NSLocalizedString(@"Stats", @"Stats");
         self.tabBarItem.image = [UIImage imageNamed:@"second"];
     }
     return self;

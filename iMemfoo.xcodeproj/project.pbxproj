@@ -628,6 +628,7 @@
 		759B6E901503C0B600E97F46 /* CardUITableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 759B6E8E1503C0B600E97F46 /* CardUITableViewController.m */; };
 		759B6E911503C0B600E97F46 /* CardUITableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 759B6E8F1503C0B600E97F46 /* CardUITableViewController.xib */; };
 		759B6E931503E13B00E97F46 /* noun_project_907_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 759B6E921503E13B00E97F46 /* noun_project_907_2.png */; };
+		759B6E951503EE3200E97F46 /* Geisha.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 759B6E941503EE3200E97F46 /* Geisha.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -1271,6 +1272,7 @@
 		759B6E8E1503C0B600E97F46 /* CardUITableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardUITableViewController.m; sourceTree = "<group>"; };
 		759B6E8F1503C0B600E97F46 /* CardUITableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CardUITableViewController.xib; sourceTree = "<group>"; };
 		759B6E921503E13B00E97F46 /* noun_project_907_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = noun_project_907_2.png; sourceTree = "<group>"; };
+		759B6E941503EE3200E97F46 /* Geisha.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Geisha.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1347,6 +1349,7 @@
 				7587DB80150124D5001AF28F /* second@2x.png */,
 				7587DB82150124D5001AF28F /* FirstViewController.xib */,
 				7587DB85150124D5001AF28F /* SecondViewController.xib */,
+				759B6E941503EE3200E97F46 /* Geisha.jpg */,
 				7587DBA5150239A9001AF28F /* samurai.jpg */,
 				7587DB69150124D5001AF28F /* Supporting Files */,
 				7587DC0A15029E23001AF28F /* iMemfoo.xcdatamodeld */,
@@ -2666,6 +2669,7 @@
 				759B6E881503945E00E97F46 /* zubon.mp3 in Resources */,
 				759B6E911503C0B600E97F46 /* CardUITableViewController.xib in Resources */,
 				759B6E931503E13B00E97F46 /* noun_project_907_2.png in Resources */,
+				759B6E951503EE3200E97F46 /* Geisha.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

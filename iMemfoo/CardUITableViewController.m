@@ -16,7 +16,7 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        self.title = NSLocalizedString(@"List2", @"List2");
+        self.title = NSLocalizedString(@"List", @"List");
         self.tabBarItem.image = [UIImage imageNamed:@"noun_project_907_2"];
     }
     return self;
@@ -138,7 +138,7 @@
 {
     Card *card = (Card *)[cards objectAtIndex:indexPath.row];
     cell.textLabel.text = [NSString stringWithFormat:@"%@ - %@ - %@",
-                           card.kanji, card.due, card.meaning, nil];
+                           card.kanji, card.kana, card.meaning, nil];
 }
 
 /*

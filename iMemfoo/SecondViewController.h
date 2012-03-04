@@ -8,6 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SecondViewController : UIViewController
+@interface SecondViewController : UIViewController {
+    UILabel *lbCardsLeft;
+    UILabel *lbCardsLearned;
+    UILabel *lbDueTomorrow;
+}
+
+@property (retain, nonatomic) IBOutlet UILabel *lbCardsLeft;
+@property (retain, nonatomic) IBOutlet UILabel *lbCardsLearned;
+@property (retain, nonatomic) IBOutlet UILabel *lbDueTomorrow;
 
 @end
+
