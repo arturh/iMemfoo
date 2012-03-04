@@ -35,6 +35,10 @@
     NSLog(@"Rpath: %@", [[NSBundle mainBundle] resourcePath]);
     NSLog(@"audio: %@", self.currentCard.audio);
     NSLog(@"path: %@", path);
+    if (path == nil) {
+        NSLog(@"path is nil");
+        return;
+    }
     NSURL *fileURL = [[NSURL alloc] initFileURLWithPath: path];
     
     self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:fileURL
