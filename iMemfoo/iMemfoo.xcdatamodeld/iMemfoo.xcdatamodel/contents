@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="872" systemVersion="11D50" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
-    <entity name="Card" syncable="YES">
+    <entity name="Card" representedClassName="Card" syncable="YES">
         <attribute name="audio" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="correct" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="due" optional="YES" attributeType="Date" syncable="YES"/>

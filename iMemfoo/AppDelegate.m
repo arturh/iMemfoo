@@ -12,6 +12,8 @@
 
 #import "SecondViewController.h"
 
+#import "Card.h"
+
 @implementation AppDelegate
 
 
@@ -63,8 +65,64 @@
     return [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
 }
 
+-(BOOL) checkIfExistDatabase
+{
+    NSFetchRequest *request = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Card"
+                                              inManagedObjectContext:self.managedObjectContext];
+    
+    [request setEntity:entity];    
+    
+    NSError *error = nil;
+    NSUInteger count = [self.managedObjectContext countForFetchRequest:request
+                                                                 error:&error];
+    
+    return count > 0;
+}
+
+-(void)populateDatabase
+{
+    NSLog(@"Entered populateDatabase");
+    
+    NSString *path = [[NSBundle mainBundle]
+                            pathForResource:@"jlptn5"
+                            ofType:@"tsv"];
+    NSString *jlptn5 = [NSString stringWithContentsOfFile:path
+                                                 encoding:NSUTF8StringEncoding error:nil];
+    NSArray *lines = [jlptn5 componentsSeparatedByString: @"\n"];
+    // If splitting consumes too much RAM, try with NSScanner
+    int i = 0;
+    for (NSString *line in lines) {
+        NSLog(@"inserting: %d", i);
+        i += 1;
+        NSArray *line_components = [line componentsSeparatedByString: @"\t"];
+        NSString *kanji = [line_components objectAtIndex:0];
+        NSString *kana = [line_components objectAtIndex:0];
+        NSString *meaning = [line_components objectAtIndex:0];
+        NSString *audio = [line_components objectAtIndex:0];
+        Card *newCard= [NSEntityDescription insertNewObjectForEntityForName:@"Card"
+                                                     inManagedObjectContext:self.managedObjectContext];
+        newCard.kanji = kanji;
+        newCard.kana = kana;
+        newCard.meaning = meaning;
+        newCard.audio = audio;
+        newCard.correct = [NSNumber numberWithInt:0];
+    }
+    NSError *error = nil;
+    [managedObjectContext save:&error];
+    NSLog(@"populateDatabase done");
+}
+
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    if (![self checkIfExistDatabase]) {
+        NSLog(@"NO DATABASE");
+        [self populateDatabase];
+    } else {
+        NSLog(@"databaseExists!");
+    }
+    
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     UIViewController *viewController1 = [[FirstViewController alloc] initWithNibName:@"FirstViewController" bundle:nil];

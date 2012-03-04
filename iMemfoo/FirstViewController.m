@@ -37,6 +37,7 @@
 }
 
 -(IBAction)remember:(id)sender {
+    NSLog(@"I remember");
     [self hideBack];
 }
 
