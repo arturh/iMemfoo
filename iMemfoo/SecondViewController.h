@@ -12,11 +12,20 @@
     UILabel *lbCardsLeft;
     UILabel *lbCardsLearned;
     UILabel *lbDueTomorrow;
+    
+    NSManagedObjectContext *managedObjectContext;
 }
 
 @property (retain, nonatomic) IBOutlet UILabel *lbCardsLeft;
 @property (retain, nonatomic) IBOutlet UILabel *lbCardsLearned;
 @property (retain, nonatomic) IBOutlet UILabel *lbDueTomorrow;
+
+@property (retain, nonatomic)  NSManagedObjectContext *managedObjectContext;
+
+-(NSUInteger)cardsLeft;
+-(NSUInteger)cardsTotal;
+-(NSUInteger)cardsLearned;
+-(NSUInteger)cardsDueTomorrow;
 
 @end
 

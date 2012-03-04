@@ -143,7 +143,8 @@
     FirstViewController *viewController1 = [[FirstViewController alloc] initWithNibName:@"FirstViewController" bundle:nil];
     viewController1.managedObjectContext = managedObjectContext;
     
-    UIViewController *viewController2 = [[SecondViewController alloc] initWithNibName:@"SecondViewController" bundle:nil];
+    SecondViewController *viewController2 = [[SecondViewController alloc] initWithNibName:@"SecondViewController" bundle:nil];
+    viewController2.managedObjectContext = managedObjectContext;
     
     CardUITableViewController *viewController3 = [[CardUITableViewController alloc] initWithNibName:@"CardUITableViewController" bundle:nil];
     viewController3.managedObjectContext = managedObjectContext;
