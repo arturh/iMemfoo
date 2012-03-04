@@ -624,6 +624,9 @@
 		759B6E861503945E00E97F46 /* zenbu.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 759B6C351503945E00E97F46 /* zenbu.mp3 */; };
 		759B6E871503945E00E97F46 /* zero.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 759B6C361503945E00E97F46 /* zero.mp3 */; };
 		759B6E881503945E00E97F46 /* zubon.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 759B6C371503945E00E97F46 /* zubon.mp3 */; };
+		759B6E8C150397A500E97F46 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 759B6E8B150397A500E97F46 /* AVFoundation.framework */; };
+		759B6E901503C0B600E97F46 /* CardUITableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 759B6E8E1503C0B600E97F46 /* CardUITableViewController.m */; };
+		759B6E911503C0B600E97F46 /* CardUITableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 759B6E8F1503C0B600E97F46 /* CardUITableViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -1262,6 +1265,10 @@
 		759B6C351503945E00E97F46 /* zenbu.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = zenbu.mp3; sourceTree = "<group>"; };
 		759B6C361503945E00E97F46 /* zero.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = zero.mp3; sourceTree = "<group>"; };
 		759B6C371503945E00E97F46 /* zubon.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = zubon.mp3; sourceTree = "<group>"; };
+		759B6E8B150397A500E97F46 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		759B6E8D1503C0B600E97F46 /* CardUITableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardUITableViewController.h; sourceTree = "<group>"; };
+		759B6E8E1503C0B600E97F46 /* CardUITableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardUITableViewController.m; sourceTree = "<group>"; };
+		759B6E8F1503C0B600E97F46 /* CardUITableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CardUITableViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1272,6 +1279,7 @@
 				7587DC0715028AE9001AF28F /* CoreData.framework in Frameworks */,
 				7587DB63150124D5001AF28F /* UIKit.framework in Frameworks */,
 				7587DB65150124D5001AF28F /* Foundation.framework in Frameworks */,
+				759B6E8C150397A500E97F46 /* AVFoundation.framework in Frameworks */,
 				7587DB67150124D5001AF28F /* CoreGraphics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1311,6 +1319,7 @@
 		7587DB61150124D5001AF28F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				759B6E8B150397A500E97F46 /* AVFoundation.framework */,
 				7587DC0615028AE9001AF28F /* CoreData.framework */,
 				7587DB62150124D5001AF28F /* UIKit.framework */,
 				7587DB64150124D5001AF28F /* Foundation.framework */,
@@ -1341,6 +1350,9 @@
 				7587DC0A15029E23001AF28F /* iMemfoo.xcdatamodeld */,
 				7587DC0D1502AD82001AF28F /* Card.h */,
 				7587DC0E1502AD82001AF28F /* Card.m */,
+				759B6E8D1503C0B600E97F46 /* CardUITableViewController.h */,
+				759B6E8E1503C0B600E97F46 /* CardUITableViewController.m */,
+				759B6E8F1503C0B600E97F46 /* CardUITableViewController.xib */,
 			);
 			path = iMemfoo;
 			sourceTree = "<group>";
@@ -2649,6 +2661,7 @@
 				759B6E861503945E00E97F46 /* zenbu.mp3 in Resources */,
 				759B6E871503945E00E97F46 /* zero.mp3 in Resources */,
 				759B6E881503945E00E97F46 /* zubon.mp3 in Resources */,
+				759B6E911503C0B600E97F46 /* CardUITableViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2689,6 +2702,7 @@
 				7587DB7D150124D5001AF28F /* SecondViewController.m in Sources */,
 				7587DC0C15029E23001AF28F /* iMemfoo.xcdatamodeld in Sources */,
 				7587DC0F1502AD82001AF28F /* Card.m in Sources */,
+				759B6E901503C0B600E97F46 /* CardUITableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

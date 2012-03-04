@@ -8,19 +8,39 @@
 
 #import "FirstViewController.h"
 
+
 @implementation FirstViewController
 
 
-@synthesize btnKana;
-@synthesize btnShowBack;
-@synthesize btnForget;
-@synthesize btnRemember;
-@synthesize tvMeaning;
-@synthesize tvKanji;
+@synthesize audioPlayer;
+
+@synthesize fetchedResultsController, 
+            managedObjectContext;
+
+@synthesize btnKana,
+            btnShowBack,
+            btnForget,
+            btnRemember,
+            tvMeaning,
+            tvKanji;
 
 @synthesize currentCard;
 
-@synthesize fetchedResultsController, managedObjectContext;
+
+-(IBAction)playAudio:(id)sender
+{
+    NSString *path = [[NSBundle mainBundle]
+                      pathForResource:currentCard.audio
+                      ofType:@"mp3"];
+    NSLog(@"Rpath: %@", [[NSBundle mainBundle] resourcePath]);
+    NSLog(@"audio: %@", self.currentCard.audio);
+    NSLog(@"path: %@", path);
+    NSURL *fileURL = [[NSURL alloc] initFileURLWithPath: path];
+    
+    self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:fileURL
+                                                              error: nil];
+    [self.audioPlayer play];
+}
 
 -(IBAction)showBack:(id)sendr {
     btnShowBack.hidden = YES;

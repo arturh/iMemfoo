@@ -7,12 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <AVFoundation/AVFoundation.h>
 
 #import "Card.h"
 
 @interface FirstViewController : UIViewController  <NSFetchedResultsControllerDelegate> {
     NSFetchedResultsController *fetchedResultsController;
     NSManagedObjectContext *managedObjectContext;
+    
+    AVAudioPlayer *audioPlayer;
 
     UIButton *btnKana;
     UIButton *btnShowBack;
@@ -21,10 +24,14 @@
     UILabel  *tvKanji;
     UITextView *tvMeaning;
     
+
+    
     Card *currentCard;
     
     
 }
+
+@property (nonatomic, retain) AVAudioPlayer *audioPlayer;
 
 @property (nonatomic, retain) NSFetchedResultsController *fetchedResultsController;
 @property (nonatomic, retain) NSManagedObjectContext *managedObjectContext;
@@ -38,6 +45,7 @@
 
 @property (nonatomic, retain) Card *currentCard;
 -(void)loadNextCard;
+-(IBAction)playAudio:(id)sender;
 
 @end
 
