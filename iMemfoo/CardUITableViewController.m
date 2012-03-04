@@ -98,14 +98,12 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
     // Return the number of sections.
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
     // Return the number of rows in the section.
     return [cards count];
 }
@@ -128,7 +126,8 @@
 -(void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath
 {
     Card *card = (Card *)[cards objectAtIndex:indexPath.row];
-    cell.textLabel.text = card.kanji;
+    cell.textLabel.text = [NSString stringWithFormat:@"%@ - %@ - %@",
+                           card.kanji, card.kana, card.meaning, nil];
 }
 
 /*
