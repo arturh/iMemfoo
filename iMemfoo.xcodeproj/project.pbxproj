@@ -627,6 +627,7 @@
 		759B6E8C150397A500E97F46 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 759B6E8B150397A500E97F46 /* AVFoundation.framework */; };
 		759B6E901503C0B600E97F46 /* CardUITableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 759B6E8E1503C0B600E97F46 /* CardUITableViewController.m */; };
 		759B6E911503C0B600E97F46 /* CardUITableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 759B6E8F1503C0B600E97F46 /* CardUITableViewController.xib */; };
+		759B6E931503E13B00E97F46 /* noun_project_907_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 759B6E921503E13B00E97F46 /* noun_project_907_2.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -1269,6 +1270,7 @@
 		759B6E8D1503C0B600E97F46 /* CardUITableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardUITableViewController.h; sourceTree = "<group>"; };
 		759B6E8E1503C0B600E97F46 /* CardUITableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardUITableViewController.m; sourceTree = "<group>"; };
 		759B6E8F1503C0B600E97F46 /* CardUITableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CardUITableViewController.xib; sourceTree = "<group>"; };
+		759B6E921503E13B00E97F46 /* noun_project_907_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = noun_project_907_2.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1390,6 +1392,7 @@
 		7587DC101502C869001AF28F /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				759B6E921503E13B00E97F46 /* noun_project_907_2.png */,
 				759B69E71503945D00E97F46 /* abiru.mp3 */,
 				759B69E81503945D00E97F46 /* abunai.mp3 */,
 				759B69E91503945D00E97F46 /* achira.mp3 */,
@@ -2662,6 +2665,7 @@
 				759B6E871503945E00E97F46 /* zero.mp3 in Resources */,
 				759B6E881503945E00E97F46 /* zubon.mp3 in Resources */,
 				759B6E911503C0B600E97F46 /* CardUITableViewController.xib in Resources */,
+				759B6E931503E13B00E97F46 /* noun_project_907_2.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

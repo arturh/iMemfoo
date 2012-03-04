@@ -16,7 +16,8 @@
 {
     self = [super initWithStyle:style];
     if (self) {
-        // Custom initialization
+        self.title = NSLocalizedString(@"List2", @"List2");
+        self.tabBarItem.image = [UIImage imageNamed:@"noun_project_907_2"];
     }
     return self;
 }
