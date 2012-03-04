@@ -11,6 +11,7 @@
 
 @implementation Card
 
+@dynamic cardId;
 @dynamic kanji;
 @dynamic kana;
 @dynamic meaning;

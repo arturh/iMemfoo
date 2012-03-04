@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+#import "Card.h"
+
 @interface FirstViewController : UIViewController  <NSFetchedResultsControllerDelegate> {
     NSFetchedResultsController *fetchedResultsController;
     NSManagedObjectContext *managedObjectContext;
@@ -16,8 +18,12 @@
     UIButton *btnShowBack;
     UIButton *btnForget;
     UIButton *btnRemember;
-    UITextView *tvKanji;
+    UILabel  *tvKanji;
     UITextView *tvMeaning;
+    
+    Card *currentCard;
+    
+    
 }
 
 @property (nonatomic, retain) NSFetchedResultsController *fetchedResultsController;
@@ -27,8 +33,11 @@
 @property (nonatomic, retain) IBOutlet UIButton *btnShowBack;
 @property (nonatomic, retain) IBOutlet UIButton *btnForget;
 @property (nonatomic, retain) IBOutlet UIButton *btnRemember;
-@property (nonatomic, retain) IBOutlet UITextView *tvKanji;
+@property (nonatomic, retain) IBOutlet UILabel *tvKanji;
 @property (nonatomic, retain) IBOutlet UITextView *tvMeaning;
+
+@property (nonatomic, retain) Card *currentCard;
+-(void)loadNextCard;
 
 @end
 

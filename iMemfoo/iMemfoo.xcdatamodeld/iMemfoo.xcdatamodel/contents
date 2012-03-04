@@ -2,6 +2,7 @@
 <model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="872" systemVersion="11D50" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
     <entity name="Card" representedClassName="Card" syncable="YES">
         <attribute name="audio" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="cardId" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="correct" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="due" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="introduced" optional="YES" attributeType="Date" syncable="YES"/>
@@ -10,6 +11,6 @@
         <attribute name="meaning" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Card" positionX="160" positionY="192" width="128" height="150"/>
+        <element name="Card" positionX="160" positionY="192" width="128" height="165"/>
     </elements>
 </model>

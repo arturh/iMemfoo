@@ -14,6 +14,7 @@
     
 }
 
+@property (nonatomic, retain) NSNumber * cardId;
 @property (nonatomic, retain) NSString * kanji;
 @property (nonatomic, retain) NSString * kana;
 @property (nonatomic, retain) NSString * meaning;

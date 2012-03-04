@@ -95,18 +95,31 @@
     for (NSString *line in lines) {
         NSLog(@"inserting: %d", i);
         i += 1;
-        NSArray *line_components = [line componentsSeparatedByString: @"\t"];
-        NSString *kanji = [line_components objectAtIndex:0];
-        NSString *kana = [line_components objectAtIndex:0];
-        NSString *meaning = [line_components objectAtIndex:0];
-        NSString *audio = [line_components objectAtIndex:0];
-        Card *newCard= [NSEntityDescription insertNewObjectForEntityForName:@"Card"
-                                                     inManagedObjectContext:self.managedObjectContext];
-        newCard.kanji = kanji;
-        newCard.kana = kana;
-        newCard.meaning = meaning;
-        newCard.audio = audio;
-        newCard.correct = [NSNumber numberWithInt:0];
+        @try {
+            NSArray *line_components = [line componentsSeparatedByString: @"\t"];
+            
+            NSNumber *cardId = [NSNumber numberWithInt:i];
+            NSString *kanji = [line_components objectAtIndex:0];
+            NSString *kana = [line_components objectAtIndex:1];
+            NSString *meaning = [line_components objectAtIndex:2];
+            NSString *audio = [line_components objectAtIndex:3];
+            
+            Card *newCard= [NSEntityDescription insertNewObjectForEntityForName:@"Card"
+                                                         inManagedObjectContext:self.managedObjectContext];
+            newCard.cardId = cardId;
+            newCard.kanji = kanji;
+            newCard.kana = kana;
+            newCard.meaning = meaning;
+            newCard.audio = audio;
+            newCard.correct = [NSNumber numberWithInt:0];
+        }
+        @catch (NSException *e) {
+            if ([e.name isEqualToString: NSRangeException])
+                NSLog(@"NSRangeException  at line %d", i);
+            else
+                @throw;
+        }
+
     }
     NSError *error = nil;
     [managedObjectContext save:&error];
@@ -125,11 +138,14 @@
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-    UIViewController *viewController1 = [[FirstViewController alloc] initWithNibName:@"FirstViewController" bundle:nil];
+    FirstViewController *viewController1 = [[FirstViewController alloc] initWithNibName:@"FirstViewController" bundle:nil];
+    viewController1.managedObjectContext = managedObjectContext;
+    
     UIViewController *viewController2 = [[SecondViewController alloc] initWithNibName:@"SecondViewController" bundle:nil];
     self.tabBarController = [[UITabBarController alloc] init];
     self.tabBarController.viewControllers = [NSArray arrayWithObjects:viewController1, viewController2, nil];
     self.window.rootViewController = self.tabBarController;
+    
     [self.window makeKeyAndVisible];
     return YES;
 }
